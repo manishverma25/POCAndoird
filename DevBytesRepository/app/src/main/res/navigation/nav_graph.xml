@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2019 Google Inc.
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,4 +25,24 @@
         android:name="com.example.android.devbyteviewer.ui.DevByteFragment"
         android:label="fragment_dev_byte"
         tools:layout="@layout/fragment_dev_byte" />
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.android.devbyteviewer.ui.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.android.devbyteviewer.ui.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
 </navigation>
